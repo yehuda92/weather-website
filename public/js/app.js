@@ -1,4 +1,4 @@
-console.log('Client side javascript file is loaded!')
+// console.log('Client side javascript file is loaded!')
 
 
 
@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = ''
     const locaion = search.value
     
-    fetch(`http://localhost:3000/weather?address=${locaion}`).then((response) => {
+    fetch(`/weather?address=${locaion}`).then((response) => {
     response.json().then((data) => {
         if(data.error) {
             messageOne.textContent = data.error
